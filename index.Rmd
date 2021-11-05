@@ -103,13 +103,16 @@ Les data sciences sont devenue un jeu de lego. Les briques de base sont les bibl
 ```{r pack, echo = TRUE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message=FALSE,warning=FALSE)
 
-#boite à outils et viz
+#boite à outils et manipulations
 library(tidyverse) # inclut ggplot pour la viz, readr et 
 library(readr) #lecture de fichier csv
-library(scales) # pour affiner les échelles de ggplot
+library(magrittr) #pour des opérateurs comme %$%
+library(reshape2) #pour facilement manipuler les données
+
 
 #Vizualisation souvent en développement de ggplot ( inclus dans tidyverse)
 library(cowplot) #pour créer des graphiques composés
+library(scales) # pour affiner les échelles de ggplot
 library(ggridges) # le joy division touch de ggplot
 library(pheatmap) #carte de chaleur
 library(flextable) #mise en forme de tableaux
